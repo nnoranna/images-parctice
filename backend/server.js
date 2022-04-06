@@ -17,7 +17,9 @@ app.get("/image-list", (req, res) => {
     res.sendFile(`${frontFolder}/data.json`)
 })
 
+
 app.use('/public', express.static(`${frontFolder}/public`));
+app.use('/dist', express.static(`${frontFolder}/dist`));
 
 app.listen(port, () => {
     console.log(`http://127.0.0.1:${port}`);
